@@ -10,6 +10,6 @@
   </div>
   <button (click)="showContact$.next(true)">show</button>
   <div class="contact_div {{(showContact$|async)&&'show_contact'}}">
-    <app-contact></app-contact>
+    <app-contact [showContact$]="showContact$"></app-contact>
   </div>
 </div>

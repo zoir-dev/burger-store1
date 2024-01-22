@@ -1,5 +1,5 @@
 import { CommonModule, NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { DataService } from '../data/data.service';
 
@@ -22,6 +22,7 @@ let telegram: any = null
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
+  @Input() showContact$: any
   contactForm!: FormGroup;
 
   constructor(private fb: FormBuilder, public data: DataService) {

@@ -5,13 +5,7 @@ import { CardComponent } from './card/card.component';
 import { ContactComponent } from './contact/contact.component';
 import { BehaviorSubject } from 'rxjs';
 
-declare global {
-  interface Window {
-    Telegram: any;
-  }
-}
 
-let telegram: any = null
 
 
 @Component({
@@ -32,14 +26,7 @@ export class AppComponent implements OnInit {
   }
 
   onCheckout() {
-    telegram = window.Telegram.WebApp
-    telegram.ready()
-    telegram.MainButton.text = "Contact";
-    telegram.MainButton.show();
-    telegram.MainButton.onClick(() => {
-      this.showContact$.next(true)
-      telegram.MainButton.hide()
-    })
+    this.showContact$.next(true)
   };
 
 }

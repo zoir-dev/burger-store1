@@ -6,7 +6,34 @@
   padding: var(--main-padding);
 }
 
-.contact-form h1 {
+.contact_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact_title div {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+}
+
+.contact_title div span {
+  width: 30px;
+  height: 3px;
+  background: var(--light-secondary-text-color);
+  transform: rotate(45deg);
+}
+
+.contact_title div span:last-child {
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 0;
+}
+
+.contact-form .contact_title h1 {
   padding-bottom: 12px;
 }
 
