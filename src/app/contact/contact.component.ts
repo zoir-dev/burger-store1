@@ -41,7 +41,11 @@ export class ContactComponent {
     telegram.MainButton.text = "Send"
     telegram.MainButton.show()
     telegram.MainButton.onClick(async () => {
-      await telegram.sendData(JSON.stringify(`${this.data.data.filter(f => f.count > 0), this.contactForm.value}`))
+      const tgData = {
+        data: this.data.data.filter(f => f.count > 0),
+        contact: this.contactForm.value
+      }
+      await telegram.sendData(JSON.stringify(tgData))
       telegram.MainButton.hide()
       telegram.close()
     })
@@ -50,6 +54,4 @@ export class ContactComponent {
   getError(errorName: string) {
     return this.contactForm.controls[errorName]
   }
-
-
 }

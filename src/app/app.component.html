@@ -8,7 +8,6 @@
   <div class="cards__container">
     <app-card *ngFor="let c of data.data$|async" [c]="c"></app-card>
   </div>
-  <button (click)="showContact$.next(true)">show</button>
   <div class="contact_div {{(showContact$|async)&&'show_contact'}}">
     <app-contact [showContact$]="showContact$"></app-contact>
   </div>
