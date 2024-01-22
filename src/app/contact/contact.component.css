@@ -15,22 +15,25 @@
 .contact_title div {
   width: auto;
   height: auto;
+  padding: 5px;
   display: flex;
+  align-items: center;
   position: relative;
   cursor: pointer;
 }
 
 .contact_title div span {
-  width: 30px;
+  width: 20px;
   height: 3px;
   background: var(--tg-theme-text-color);
+  background-color: red;
   transform: rotate(45deg);
 }
 
 .contact_title div span:last-child {
   transform: rotate(-45deg);
   position: absolute;
-  top: 0;
+  top: 5px;
 }
 
 .contact-form .contact_title h1 {
