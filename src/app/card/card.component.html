@@ -1,0 +1,17 @@
+<div class="card">
+      <span
+        class="{{c.count!==0 ? 'card__badge' : 'card__badge--hidden'}}"
+      >
+        {{c.count}}
+      </span>
+      <div class="image__container">
+        <img src="{{c.img}}" alt={title} />
+      </div>
+      <h4 class="card__title">
+        {{c.title}} . <span class="card__price">{{c.price|currency}}</span>
+      </h4>
+      <div class="btn-container">
+        <button class="btn add" (click)="data.addToStore(c.id)">+</button>
+        <button class="btn remove" (click)="data.removeFromStore(c.id)" *ngIf="isDecreasable()">-</button>
+      </div>
+</div>

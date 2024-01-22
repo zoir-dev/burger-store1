@@ -1,0 +1,20 @@
+<div class="contact-form">
+  <h1>Contact Information</h1>
+  <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name" placeholder="Name">
+        <span *ngIf="getError('name').hasError('required')&&contactForm.get('name')?.touched">
+          Name is required
+        </span>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" formControlName="phone" placeholder="Phone Number">
+        <span *ngIf="getError('phone').hasError('required')&&contactForm.get('phone')?.touched">
+          Phone Number is required
+        </span>
+    </div>
+    <button type="submit" class="btn checkout" [disabled]="contactForm.invalid">Submit</button>
+  </form>
+</div>
