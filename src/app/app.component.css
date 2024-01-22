@@ -1,3 +1,8 @@
+.home {
+  height: 100vh;
+  overflow-y: auto;
+}
+
 .home p {
   font-size: 16px;
 }
