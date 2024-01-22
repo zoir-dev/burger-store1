@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 12px;
 }
 
 .contact_title div {
@@ -26,7 +27,6 @@
   width: 20px;
   height: 3px;
   background: var(--tg-theme-text-color);
-  background-color: red;
   transform: rotate(45deg);
 }
 
@@ -34,10 +34,6 @@
   transform: rotate(-45deg);
   position: absolute;
   top: 5px;
-}
-
-.contact-form .contact_title h1 {
-  padding-bottom: 12px;
 }
 
 .form-group {
@@ -64,15 +60,18 @@ input {
   box-sizing: border-box;
   margin-bottom: 10px;
   box-shadow: none !important;
-  border: 1px solid #aaa;
+  outline: none !important;
+  border: 2px solid #aaa;
   border-radius: 10px;
 }
 
 input:active {
-  border: 1px solid var(--tg-theme-button-color);
+  border-color: var(--tg-theme-button-color);
   box-shadow: none;
   font-size: 16px;
   padding-left: 10px;
+  box-shadow: none !important;
+  transform: none !important;
 }
 
 
