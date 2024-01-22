@@ -23,7 +23,7 @@
 .contact_title div span {
   width: 30px;
   height: 3px;
-  background: var(--light-secondary-text-color);
+  background: var(--tg-theme-text-color);
   transform: rotate(45deg);
 }
 

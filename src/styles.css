@@ -60,6 +60,7 @@ hr {
 
 .btn.remove {
   background-color: tomato !important;
+  color: var(--tg-theme-text-color);
 }
 
 .btn.checkout {
