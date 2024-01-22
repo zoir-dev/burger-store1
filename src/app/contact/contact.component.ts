@@ -40,8 +40,8 @@ export class ContactComponent {
     telegram.MainButton.text = "Send"
     telegram.MainButton.show()
     telegram.MainButton.onClick(async () => {
+      await telegram.sendData(JSON.stringify(`${this.data.data.filter(f => f.count > 0), this.contactForm.value}`))
       telegram.MainButton.hide()
-      await telegram.sendData(JSON.stringify(this.data.data.filter(f => f.count > 0), this.contactForm.value))
       telegram.close()
     })
   }
