@@ -1,8 +1,3 @@
-.home {
-  height: 100vh;
-  overflow-y: auto;
-}
-
 .home p {
   font-size: 16px;
 }
@@ -23,7 +18,7 @@
 
 .contact_div {
   position: absolute;
-  bottom: -100%;
+  bottom: -150%;
   transition: 0.5s ease all;
   width: 100%;
   height: 100%;
