@@ -10,6 +10,11 @@
   padding-top: 12px;
 }
 
+.cards__container_none {
+  height: 100vh;
+  overflow: hidden;
+}
+
 .cards__container {
   display: flex;
   flex-wrap: wrap;

@@ -5,7 +5,7 @@
     <button class="btn checkout" *ngIf="data.getPrice()===0">Order!</button>
     <button class="btn checkout" *ngIf="data.getPrice()>0" (click)="onCheckout()">Checkout</button>
   </div>
-  <div class="cards__container">
+  <div class="cards__container {{(showContact$|async)&&'cards__container_none'}}">
     <app-card *ngFor="let c of data.data$|async" [c]="c"></app-card>
   </div>
   <div class="contact_div {{(showContact$|async)&&'show_contact'}}">
